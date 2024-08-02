@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Business\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Common\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Validators\" />
+	<Folder Include="SalesCrm_Configurations\" />
+  </ItemGroup>
+</Project>

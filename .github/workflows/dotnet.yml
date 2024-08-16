@@ -7,9 +7,12 @@ on:
   pull_request:
     branches:
       - master
+    types:
+      - closed
 
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +36,7 @@ jobs:
       run: dotnet publish --configuration Release --output ./publish
 
     - name: Commit publish folder
+      if: github.event.pull_request.merged == true
       run: |
         git config --global user.name 'arun-pfbaconsultant5'
         git config --global user.email 'Pfbaconsultant5@poconnor.com'
